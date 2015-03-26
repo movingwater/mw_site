@@ -579,7 +579,8 @@ header {
     height: 50px;
     width: 50px;
     text-align: center;
-    padding: 5px; }
+    padding: 5px;
+    cursor: pointer; }
   @media screen and (max-width: 48em)  {
     header {
       height: 100%; }
@@ -591,16 +592,19 @@ header {
         -moz-transform: translate(0, -100%);
         -ms-transform: translate(0, -100%);
         -o-transform: translate(0, -100%);
-        transform: translate(0, -100%); } }
+        transform: translate(0, -100%); }
+      header .header-control {
+        left: 0;
+        width: 100%; } }
 
 .content {
   min-height: 2000px;
   position: relative;
   top: 570px;
   padding: 0 50px;
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  -moz-transition: -moz-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out; }
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  -moz-transition: -moz-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out; }
   .content.close {
     -webkit-transform: translate(0, -500px);
     -moz-transform: translate(0, -500px);
