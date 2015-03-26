@@ -499,7 +499,7 @@ html {
 header {
   position: fixed;
   z-index: 1;
-  height: 400px;
+  height: 500px;
   width: 100%;
   background: #0E71B4;
   color: white;
@@ -511,11 +511,11 @@ header {
     content: "";
     display: table; }
   header.close {
-    -webkit-transform: translate(0, -400px);
-    -moz-transform: translate(0, -400px);
-    -ms-transform: translate(0, -400px);
-    -o-transform: translate(0, -400px);
-    transform: translate(0, -400px); }
+    -webkit-transform: translate(0, -500px);
+    -moz-transform: translate(0, -500px);
+    -ms-transform: translate(0, -500px);
+    -o-transform: translate(0, -500px);
+    transform: translate(0, -500px); }
   header nav {
     float: left;
     position: absolute;
@@ -580,6 +580,18 @@ header {
     width: 50px;
     text-align: center;
     padding: 5px; }
+  @media screen and (max-width: 48em)  {
+    header {
+      height: 100%; }
+      header .header-control {
+        bottom: 0px; }
+      header.close {
+        top: 50px;
+        -webkit-transform: translate(0, -100%);
+        -moz-transform: translate(0, -100%);
+        -ms-transform: translate(0, -100%);
+        -o-transform: translate(0, -100%);
+        transform: translate(0, -100%); } }
 
 .content {
   min-height: 2000px;
@@ -595,6 +607,15 @@ header {
     -ms-transform: translate(0, -500px);
     -o-transform: translate(0, -500px);
     transform: translate(0, -500px); }
+  @media screen and (max-width: 48em)  {
+    .content {
+      top: 70px; }
+      .content.close {
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0); } }
 
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
