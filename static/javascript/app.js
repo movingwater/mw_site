@@ -3,8 +3,14 @@ $('.header-control').click(function(){
     $('html, body').animate({
         scrollTop: $('body').offset().top
     });
-    return false;
+    
 });
+//$('.affix-top.header-control').click(function(){
+//    $('html, body').animate({
+//        scrollTop: $('#content').offset().top
+//    });
+//    
+//});
 
 // Make Header fixed
 $('header').affix({
