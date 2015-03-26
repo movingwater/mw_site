@@ -499,7 +499,7 @@ html {
 header {
   position: fixed;
   z-index: 1;
-  height: 500px;
+  height: 400px;
   width: 100%;
   background: #0E71B4;
   color: white;
@@ -511,11 +511,11 @@ header {
     content: "";
     display: table; }
   header.close {
-    -webkit-transform: translate(0, -500px);
-    -moz-transform: translate(0, -500px);
-    -ms-transform: translate(0, -500px);
-    -o-transform: translate(0, -500px);
-    transform: translate(0, -500px); }
+    -webkit-transform: translate(0, -400px);
+    -moz-transform: translate(0, -400px);
+    -ms-transform: translate(0, -400px);
+    -o-transform: translate(0, -400px);
+    transform: translate(0, -400px); }
   header nav {
     float: left;
     position: absolute;
