@@ -1,13 +1,12 @@
-$('.header-control').click(function () {
-  $('header, #content').toggleClass('open close');
-  $('header').toggleClass('affix affix-top');
-  $('.header-control .fa').toggleClass('fa-angle-up fa-angle-down');
+// Jump back to top
+$('.header-control').click(function(){
+    $('html, body').animate({
+        scrollTop: $('body').offset().top
+    });
+    return false;
 });
 
-$('.profile-image').click(function () {
-  $(this).toggleClass('slide-in slide-out');
-});
-
+// Make Header fixed
 $('header').affix({
   offset: {
     top:500,
@@ -23,4 +22,9 @@ $('header').on('affixed-top.bs.affix', function(){
   $("header, #content").removeClass('fixed close');
   $('.header-control .fa').toggleClass('fa-angle-up fa-angle-down');
 
+});
+
+//slide away Profile Image and reveal address
+$('.profile-image').click(function () {
+  $(this).toggleClass('slide-in slide-out');
 });
