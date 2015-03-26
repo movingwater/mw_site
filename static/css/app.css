@@ -497,7 +497,7 @@ html {
   box-sizing: inherit; }
 
 header {
-  position: fixed;
+  position: relative;
   z-index: 1;
   height: 500px;
   width: 100%;
@@ -511,11 +511,8 @@ header {
     content: "";
     display: table; }
   header.close {
-    -webkit-transform: translate(0, -500px);
-    -moz-transform: translate(0, -500px);
-    -ms-transform: translate(0, -500px);
-    -o-transform: translate(0, -500px);
-    transform: translate(0, -500px); }
+    top: -500px;
+    position: fixed; }
   header nav {
     float: left;
     position: absolute;
@@ -544,12 +541,6 @@ header {
       clear: both;
       content: "";
       display: table; }
-    header .profile:hover .profile-image {
-      -webkit-transform: translate(-300px);
-      -moz-transform: translate(-300px);
-      -ms-transform: translate(-300px);
-      -o-transform: translate(-300px);
-      transform: translate(-300px); }
     header .profile .profile-image {
       height: 300px;
       width: 300px;
@@ -558,9 +549,16 @@ header {
       float: left;
       position: relative;
       z-index: 1;
+      cursor: pointer;
       -webkit-transition: -webkit-transform 0.5s ease-in-out;
       -moz-transition: -moz-transform 0.5s ease-in-out;
       transition: transform 0.5s ease-in-out; }
+      header .profile .profile-image.slide-out {
+        -webkit-transform: translate(-300px);
+        -moz-transform: translate(-300px);
+        -ms-transform: translate(-300px);
+        -o-transform: translate(-300px);
+        transform: translate(-300px); }
     header .profile .profile-info {
       position: absolute;
       padding: 20px;
@@ -600,26 +598,20 @@ header {
 .content {
   min-height: 2000px;
   position: relative;
-  top: 570px;
+  top: 70px;
   padding: 0 50px;
   -webkit-transition: -webkit-transform 1s ease-in-out;
   -moz-transition: -moz-transform 1s ease-in-out;
   transition: transform 1s ease-in-out; }
-  .content.close {
-    -webkit-transform: translate(0, -500px);
-    -moz-transform: translate(0, -500px);
-    -ms-transform: translate(0, -500px);
-    -o-transform: translate(0, -500px);
-    transform: translate(0, -500px); }
+  .content.fixed {
+    top: 570px; }
   @media screen and (max-width: 48em)  {
-    .content {
-      top: 70px; }
-      .content.close {
-        -webkit-transform: translate(0, 0);
-        -moz-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-        -o-transform: translate(0, 0);
-        transform: translate(0, 0); } }
+    .content.close {
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
+      transform: translate(0, 0); } }
 
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
