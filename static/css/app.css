@@ -501,53 +501,40 @@ header {
   z-index: 1;
   height: 500px;
   width: 100%;
+  padding: 50px;
   background: #0E71B4;
   color: white;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   -moz-transition: -moz-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out; }
-  header::after {
-    clear: both;
-    content: "";
-    display: table; }
-  header.close {
-    top: -500px;
-    position: fixed; }
-  header nav {
-    float: left;
-    position: absolute;
-    top: 50%;
-    left: 50px;
-    -webkit-transform: translate(0, -50%);
-    -moz-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    -o-transform: translate(0, -50%);
-    transform: translate(0, -50%); }
-    header nav ul {
-      text-align: center; }
-      header nav ul li {
-        border: 1px solid white;
-        padding: 10px;
-        margin: 10px;
-        text-transform: uppercase;
-        font-weight: 800;
-        font-size: -webkit-calc(1.5em * 1.2);
-        font-size: calc(1.5em * 1.2); }
-  header .profile {
-    float: right;
-    margin: 100px 50px;
-    position: relative; }
-    header .profile::after {
+  header .grid {
+    display: block; }
+    header .grid::after {
       clear: both;
       content: "";
       display: table; }
+  header nav ul {
+    text-align: center; }
+    header nav ul li {
+      border: 1px solid white;
+      padding: 10px 0;
+      margin: 10px 0;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: -webkit-calc(1.5em * 1.2);
+      font-size: calc(1.5em * 1.2); }
+  header .profile {
+    position: relative;
+    float: right;
+    height: 300px;
+    width: 300px; }
     header .profile .profile-image {
       height: 300px;
       width: 300px;
       border-radius: 50%;
       overflow: hidden;
-      float: left;
-      position: relative;
+      background: white;
+      position: absolute;
       z-index: 1;
       cursor: pointer;
       -webkit-transition: -webkit-transform 0.5s ease-in-out;
@@ -561,15 +548,15 @@ header {
         transform: translate(-300px); }
     header .profile .profile-info {
       position: absolute;
-      padding: 20px;
       top: 50%;
-      -webkit-transform: translate(0, -50%);
-      -moz-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-      -o-transform: translate(0, -50%);
-      transform: translate(0, -50%);
-      z-index: 0; }
-  header .header-control {
+      left: 50%;
+      z-index: 0;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+  header #header-control {
     position: absolute;
     background: #0E71B4;
     bottom: -50px;
@@ -579,21 +566,18 @@ header {
     text-align: center;
     padding: 5px;
     cursor: pointer; }
-  @media screen and (max-width: 48em)  {
-    header {
-      height: 100%; }
-      header .header-control {
-        bottom: 0px; }
-      header.close {
-        top: 50px;
-        -webkit-transform: translate(0, -100%);
-        -moz-transform: translate(0, -100%);
-        -ms-transform: translate(0, -100%);
-        -o-transform: translate(0, -100%);
-        transform: translate(0, -100%); }
-      header .header-control {
-        left: 0;
-        width: 100%; } }
+    header #header-control.close {
+      top: 0;
+      position: fixed; }
+
+@media screen and (max-width: 48em)  {
+  header .profile {
+    float: none; }
+  header #header-control {
+    left: 0;
+    width: 100%; }
+    header #header-control.close {
+      top: 0px; } }
 
 .content {
   min-height: 2000px;
@@ -603,8 +587,6 @@ header {
   -webkit-transition: -webkit-transform 1s ease-in-out;
   -moz-transition: -moz-transform 1s ease-in-out;
   transition: transform 1s ease-in-out; }
-  .content.fixed {
-    top: 570px; }
   @media screen and (max-width: 48em)  {
     .content.close {
       -webkit-transform: translate(0, 0);
@@ -2329,5 +2311,60 @@ header {
 
 .fa-medium:before {
   content: "\f23a"; }
+
+.column-3 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 23.40426%; }
+  .column-3:last-child {
+    margin-right: 0; }
+
+.column-4 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 31.91489%; }
+  .column-4:last-child {
+    margin-right: 0; }
+
+.column-6 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 48.93617%; }
+  .column-6:last-child {
+    margin-right: 0; }
+
+.column-8 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 65.95745%; }
+  .column-8:last-child {
+    margin-right: 0; }
+
+@media screen and (max-width: 48em)  {
+  .column-3 {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 100%; }
+    .column-3:last-child {
+      margin-right: 0; }
+  .column-4 {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 100%; }
+    .column-4:last-child {
+      margin-right: 0; }
+  .column-6 {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 100%; }
+    .column-6:last-child {
+      margin-right: 0; } }
 
 /*# sourceMappingURL=app.css.map */
