@@ -507,12 +507,6 @@ header {
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   -moz-transition: -moz-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out; }
-  header .grid {
-    display: block; }
-    header .grid::after {
-      clear: both;
-      content: "";
-      display: table; }
   header nav ul {
     text-align: center; }
     header nav ul li {
@@ -594,6 +588,39 @@ header {
       -ms-transform: translate(0, 0);
       -o-transform: translate(0, 0);
       transform: translate(0, 0); } }
+  .content section {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px 0; }
+    .content section::after {
+      clear: both;
+      content: "";
+      display: table; }
+
+.work .work-thumb {
+  position: relative;
+  margin-bottom: 30px; }
+  .work .work-thumb:nth-child(2n) {
+    margin-right: 0; }
+  .work .work-thumb:nth-child(2n+1) {
+    clear: left; }
+  .work .work-thumb .caption {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), #000);
+    background-image: linear-gradient(rgba(255, 255, 255, 0), #000);
+    color: white;
+    width: 100%; }
+    .work .work-thumb .caption h4 {
+      margin: 0;
+      padding: 0;
+      line-height: 1; }
+    .work .work-thumb .caption p {
+      line-height: 1;
+      font-size: 0.7em; }
 
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2311,6 +2338,13 @@ header {
 
 .fa-medium:before {
   content: "\f23a"; }
+
+.grid {
+  display: block; }
+  .grid::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 .column-3 {
   float: left;
