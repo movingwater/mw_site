@@ -598,29 +598,69 @@ header {
       content: "";
       display: table; }
 
-.work .work-thumb {
+.work .work-thumb:nth-child(2n) {
+  margin-right: 0; }
+.work .work-thumb:nth-child(2n+1) {
+  clear: left; }
+
+.work-thumb {
   position: relative;
-  margin-bottom: 30px; }
-  .work .work-thumb:nth-child(2n) {
-    margin-right: 0; }
-  .work .work-thumb:nth-child(2n+1) {
-    clear: left; }
-  .work .work-thumb .caption {
+  background: #fff;
+  text-align: left;
+  overflow: hidden; }
+  .work-thumb img {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s; }
+  .work-thumb .caption {
+    z-index: 1;
     position: absolute;
-    bottom: 0;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0);
-    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), #000);
-    background-image: linear-gradient(rgba(255, 255, 255, 0), #000);
-    color: white;
-    width: 100%; }
-    .work .work-thumb .caption h4 {
-      margin: 0;
-      padding: 0;
-      line-height: 1; }
-    .work .work-thumb .caption p {
-      line-height: 1;
-      font-size: 0.7em; }
+    top: 0;
+    left: 0;
+    padding: 20px; }
+    .work-thumb .caption h2 {
+      color: white;
+      margin: 0 0 10px 0; }
+    .work-thumb .caption p {
+      padding: 5px;
+      font-size: 80%;
+      line-height: 1.5;
+      opacity: 0;
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+      -webkit-transform: translate3d(0, -10px, 0);
+      transform: translate3d(0, -10px, 0); }
+    .work-thumb .caption p a {
+      margin: 0 0.5em;
+      color: #101010; }
+    .work-thumb .caption p a:hover, .work-thumb .caption p a:focus {
+      opacity: 0.6; }
+    .work-thumb .caption::before {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      left: 20px;
+      z-index: -1;
+      height: 3.5em;
+      background: #fff;
+      content: '';
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+      -webkit-transform: translate3d(0, 70px, 0) scale3d(1, 0.023, 1);
+      transform: translate3d(0, 70px, 0) scale3d(1, 0.023, 1);
+      -webkit-transform-origin: 50% 0;
+      transform-origin: 50% 0; }
+  .work-thumb:hover img {
+    opacity: 0.5;
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1); }
+  .work-thumb:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  .work-thumb:hover .caption::before {
+    opacity: 0.7;
+    -webkit-transform: translate3d(0, 80px, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 80px, 0) scale3d(1, 1, 1); }
 
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
