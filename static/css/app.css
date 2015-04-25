@@ -607,10 +607,12 @@ header {
   position: relative;
   background: #fff;
   text-align: left;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 2.12766%; }
   .work-thumb img {
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s; }
+    transition: opacity 0.35s, transform 0.35s;
+    display: block; }
   .work-thumb .caption {
     z-index: 1;
     position: absolute;
